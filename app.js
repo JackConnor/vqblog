@@ -1,9 +1,15 @@
+
+console.log('APPPPPPPP');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var http     = require('http');
+var mongoose = require('mongoose');
+var bodyParser     = require('body-parser');
+var methodOverride = require('method-override');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -56,5 +62,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.listen(process.env.PORT || 5555)
 
 module.exports = app;
