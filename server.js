@@ -5,6 +5,7 @@ var logger         = require('morgan');
 var path           = require('path');
 var cookieParser   = require('cookie-parser');
 var bodyParser     = require('body-parser');
+var methodOverride = require('method-override');
 
 var app     = express();
 
@@ -22,3 +23,5 @@ console.log('4');
 // override with the X-HTTP-Method-Override header in the request. simulate DELETE/PUT
 app.use(methodOverride('X-HTTP-Method-Override'));
 app.use(express.static(__dirname + '/public'));
+
+app.listen(process.env.PORT || 5555)
