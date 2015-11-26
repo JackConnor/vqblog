@@ -64,4 +64,6 @@ app.use(function(err, req, res, next) {
 
 app.listen('5555');
 
+mongoose.connect('mongodb://jackconnor:Skateboard1@ds059654.mongolab.com:59654/vqblog')
+
 module.exports = app;
