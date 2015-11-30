@@ -3,8 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>VQ Blog</title>
+
+    <!-- Require all the cdns and librairies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.1/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-route.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.4/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+    <!-- requiring style sheets -->
+    <link rel="stylesheet" href="stylesheets/style.css" charset="utf-8">
+
+    <!-- begin requiring all controllers -->
+    <script src="javascripts/controllers/mainPageController.js" charset="utf-8"></script>
+
+    <!-- begin requiring other script sheets -->
+    <script src="app.routes.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+
   </head>
-  <body>
-    VQ Blog
+  <body ng-app='vqBlog'>
+    <div class="bodyView">
+      <div class="navbarContainer">
+        The VQ
+      </div>
+      <section ng-view></section>
+    </div>
   </body>
 </html>
