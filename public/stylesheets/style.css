@@ -85,6 +85,11 @@
   font-size: 51px;
 }
 
+.navbarContainerP{
+  width: 200px;
+  z-index: 2;
+}
+
 .singleArticleContainer {
   width: 90%;
   margin-left: 5%;

@@ -17,6 +17,12 @@ var app = angular.module('mainPageController', [])
       self.allArticles = articles.data
     })
 
+    /////make logo reroute us to the homepage
+    $('.navbarContainerP').on('click', function(){
+      console.log('oh yea');
+      window.location.hash = "#/"
+    })
+
     /////////angular events to do the hover effect
     //////////////////////////////////////////////
     /////////////////////////////////////////////
