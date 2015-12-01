@@ -7,6 +7,16 @@ var app = angular.module('mainPageController', [])
   function mainPageCtrl($http){
     var self = this;
 
+    // get all articles
+    $http({
+      method: "GET"
+      ,url: "/api/articles"
+    })
+    .then(function(articles){
+      console.log(articles);
+      self.allArticles = articles.data
+    })
+
     /////////angular events to do the hover effect
     //////////////////////////////////////////////
     /////////////////////////////////////////////
@@ -54,7 +64,9 @@ var app = angular.module('mainPageController', [])
       $('.homeListContent').width(contentWidth - 255);
       console.log(contentWidth);
     }
-    setTimeout(contentWidthFunc, 10);
+    setTimeout(contentWidthFunc, 100);
+    setTimeout(contentWidthFunc, 500);
+    setTimeout(contentWidthFunc, 1000);
     $(window).resize(function(){
       contentWidthFunc();
     })

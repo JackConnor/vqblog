@@ -10,10 +10,12 @@
 .homeArticleContent {
   margin: 20px 0 0 10px;
   outline: 3px solid blue;
+  max-width: 100%;
 }
 
 .homeArticleTitle {
   margin: 15px 0 0 10px;
+  max-width: 100%;
 }
 
 .homeListContent {
@@ -22,6 +24,8 @@
   height: 250px;
   outline: 2px solid yellow;
   float: left;
+  max-width: 100%;
+
 }
 
 .homeListHolder {

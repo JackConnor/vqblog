@@ -2,12 +2,12 @@ Ich bin im Homepage
 <div class="homeContainer" ng-controller='mainPageCtrl'>
   <div class="row">
     <div class="homeListHolder col-sm-10 col-xs-12">
-      <div class="homeArticleList"  id='homeArticle{{$index}}' ng-repeat="article in main.seed" ng-mouseenter="main.hoverArticle($index, article.id)" ng-mouseleave="main.hoverArticle($index, article.id)"
+      <div class="homeArticleList"  id='homeArticle{{$index}}' ng-repeat="article in main.allArticles" ng-mouseenter="main.hoverArticle($index, article._id)" ng-mouseleave="main.hoverArticle($index, article._id)"
       >
         <div class="homeArticleContainer">
           <div class="homeListPhoto" id="homeListPhoto{{$index}}">
             <div class="homeListPhotoImage">
-              <img src="{{article.imgSmall}}" alt="" />
+              <img src="{{article.smallPhoto}}" alt="" />
             </div>
           </div>
           <div class="homeListContent">

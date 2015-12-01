@@ -6,6 +6,10 @@ var app = angular.module('articleController', [])
   function articleCtrl($http){
     var self = this;
 
+    ///////////get all articles/////
+    var currentArticle = function(){
+
+    }
 
   ////////end article controller//////
   ////////////////////////////////////
