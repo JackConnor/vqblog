@@ -15,6 +15,7 @@ var app = angular.module('articleController', [])
       })
       .then(function(article){
         console.log(article);
+        self.currentArticle = article.data;
       })
     }
     if(window.location.hash.split('/')[1] == "articles"){

@@ -1,1 +1,18 @@
-hi there
+<div class="singleArticleContainer">
+  <div class="singleTitle">
+    <p>{{article.currentArticle.title}}</p>
+  </div>
+  <div class="singleImage">
+    <img src="{{article.currentArticle.bigPhoto}}" alt="" />
+    <div class="singleCaption">
+      <h4>
+        {{article.currentArticle.caption}}
+      </h4>
+    </div>
+  </div>
+  <div class="singleContentContainer">
+    <div class="singleContent">
+      {{article.currentArticle.content}}
+    </div>
+  </div>
+</div>

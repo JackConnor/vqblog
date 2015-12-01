@@ -85,3 +85,43 @@
   height: 70px;
   background-color: grey;
 }
+
+.singleArticleContainer {
+  width: 90%;
+  margin-left: 5%;
+  background-color: #DCDCDC;
+  padding-bottom: 30px;
+}
+
+.singleCaption {
+  text-align: center;
+}
+
+.singleContentContainer {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 20px;
+  background-color: #e6e6e6;
+  text-align: justify;
+  padding: 15px;
+}
+
+.singleContent {
+  font-size: 30px;
+}
+
+.singleImage{
+  width: 80%;
+  margin-left: 10%;
+}
+
+.singleImage img{
+  width: 100%;
+}
+
+.singleTitle {
+  margin: 0 0 15px 10%;
+  padding: 15px 0 0 0;
+  font-size: 45px;
+  font-style: bolder;
+}
