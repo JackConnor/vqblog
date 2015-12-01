@@ -14,7 +14,7 @@ angular.module('app.routes', ['ngRoute'])
       ,controllerAs: 'main'
     })
 
-    .when('/articles/'+id, {
+    .when('/articles/:id', {
       templateUrl: 'templates/_singleArticle.html'
       ,controller: 'articleCtrl'
       ,controllerAs: 'article'
