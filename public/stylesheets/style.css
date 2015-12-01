@@ -4,25 +4,25 @@
 
 .homeArticleContainer {
   height: 250px;
-  outline: 2px solid blue;
+  margin-bottom: 5px;
+  background-color: #ebfafa;
 }
 
 .homeArticleContent {
   margin: 20px 0 0 10px;
-  outline: 3px solid blue;
   max-width: 100%;
 }
 
 .homeArticleTitle {
   margin: 15px 0 0 10px;
   max-width: 100%;
+  font-size: 50px;
 }
 
 .homeListContent {
   display: inline-block;
   position: relative;
   height: 250px;
-  outline: 2px solid yellow;
   float: left;
   max-width: 100%;
 
@@ -36,7 +36,6 @@
   height: 100%;
   width: 250px;
   display: inline-block;
-  outline: 2px solid green;
   float: left;
 }
 
@@ -46,7 +45,6 @@
   margin-top: 5%;
   margin-left: 5%;
   display: inline-block;
-  outline: 2px solid green;
   float: left;
 }
 
@@ -63,12 +61,13 @@
   width: 50%;
   margin-top: 65px;
   margin-left: 25%;
-  outline: 3px solid white;
   color: white;
+  font-style: bolder;
   position: absolute;
+  outline: 3px solid white;
   z-index: 3;
   text-align: center;
-  font-size: 28px;
+  font-size: 38px;
 }
 
 .linkHolderContainer{
@@ -77,7 +76,6 @@
   position: absolute;
   z-index: 2;
   background-color: #4B1240;
-  outline: 2px solid orange;
   opacity: .85
 }
 
