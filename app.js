@@ -25,13 +25,14 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+require('./api.js')(app);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
 });
-
 // error handlers
 
 // development error handler
@@ -58,6 +59,13 @@ app.use(function(err, req, res, next) {
 
 app.listen('5555');
 
-mongoose.connect('mongodb://jackconnor:Skateboard1@ds059654.mongolab.com:59654/vqblog')
+app.get('*', function(req, res){
+
+  res.sendFile( __dirname + '/public/index.html')
+})
+
+var dbUrl = 'mongodb://jackconnor:Skateboard1@ds059654.mongolab.com:59654/vqblog';
+
+mongoose.createConnection(dbUrl);
 
 module.exports = app;
