@@ -4,8 +4,8 @@
 
 .homeArticleContainer {
   height: 250px;
-  margin-bottom: 5px;
-  background-color: #ebfafa;
+  margin-top: 5px;
+  background-color: #d1e0e0;
 }
 
 .homeArticleContent {
@@ -81,7 +81,8 @@
 
 .navbarContainer {
   height: 70px;
-  background-color: grey;
+  background-color: #f0f5f5;
+  font-size: 51px;
 }
 
 .singleArticleContainer {
