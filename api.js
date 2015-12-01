@@ -20,6 +20,17 @@ module.exports = function(app){
       }
     });
   });
+
+  app.get('/api/articles/:id', function(req, res){
+    console.log(req.params.id);
+    Blogpost.findOne({"_id": req.params.id}, function(err, article){
+      if(err){console.log(err)}
+      else{
+        console.log(article);
+        res.json(article);
+      }
+    })
+  })
 }
 
 

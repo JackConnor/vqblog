@@ -8,7 +8,17 @@ var app = angular.module('articleController', [])
 
     ///////////get all articles/////
     var currentArticle = function(){
-
+      var articleId = window.location.hash.split('/')[2];
+      $http({
+        method: "GET"
+        ,url: "api/articles/"+articleId
+      })
+      .then(function(article){
+        console.log(article);
+      })
+    }
+    if(window.location.hash.split('/')[1] == "articles"){
+      currentArticle();
     }
 
   ////////end article controller//////
