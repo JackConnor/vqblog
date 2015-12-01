@@ -38,6 +38,29 @@
   display: inline-block;
 }
 
+.linkHolder {
+  height: 120px;
+  width: 50%;
+  margin-top: 65px;
+  margin-left: 25%;
+  outline: 3px solid white;
+  color: white;
+  position: absolute;
+  z-index: 3;
+  text-align: center;
+  font-size: 28px;
+}
+
+.linkHolderContainer{
+  width: 97.5%;
+  height: 250px;
+  position: absolute;
+  z-index: 2;
+  background-color: #4B1240;
+  outline: 2px solid orange;
+  opacity: .85
+}
+
 .navbarContainer {
   height: 70px;
   background-color: grey;
