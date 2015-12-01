@@ -7,12 +7,13 @@ Ich bin im Homepage
         <div class="homeArticleContainer">
           <div class="homeListPhoto" id="homeListPhoto{{$index}}">
             <div class="homeListPhotoImage">
-              <img src="" alt="" />
+              <img src="{{article.imgSmall}}" alt="" />
             </div>
           </div>
           <div class="homeListContent">
-            <h2>{{article.title}}</h2>
-            <h3>{{article.content}}</h3>
+            <h1 class='homeArticleTitle'>{{article.title}}</h2>
+            <h3 class='homeArticleContent'>{{article.content}}</h3>
+            <h4 class='homeArticleAuthor'>--{{article.author}}</h4>
           </div>
         </div>
       </div>

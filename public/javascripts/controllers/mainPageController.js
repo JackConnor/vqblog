@@ -40,10 +40,20 @@ var app = angular.module('mainPageController', [])
         hoverCounterArray[ind] = !hoverCounterArray[ind];
       }
     }
-
     /////////end angular events to do the hover effect
     //////////////////////////////////////////////////
     //////////////////////////////////////////////////
+
+    ///////////controlling the width of the content box
+    function contentWidthFunc(){
+      var contentWidth = $(".homeListHolder").width();
+      $('.homeListContent').width(contentWidth - 255);
+      console.log(contentWidth);
+    }
+    setTimeout(contentWidthFunc, 10);
+    $(window).resize(function(){
+      contentWidthFunc();
+    })
 
     ///add in seed file, file swap out later for database
     self.seed = [
@@ -51,6 +61,7 @@ var app = angular.module('mainPageController', [])
       title: 'Some Title'
       ,content: "blah blah blha blah blah blah blha"
       ,author: "Jack"
+      ,imgSmall: "http://orig12.deviantart.net/6eee/f/2012/299/b/a/150509_4727155___jpeg__48_kb__400x400__by_bentelshe3r-d5j1z44.jpg"
     },
     {
       title: 'Some Title'

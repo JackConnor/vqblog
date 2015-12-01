@@ -1,13 +1,25 @@
+.homeArticleAuthor {
+  margin-left: 30px;
+}
+
 .homeArticleContainer {
   height: 250px;
   outline: 2px solid blue;
+}
+
+.homeArticleContent {
+  margin: 20px 0 0 10px;
+  outline: 3px solid blue;
+}
+
+.homeArticleTitle {
+  margin: 15px 0 0 10px;
 }
 
 .homeListContent {
   display: inline-block;
   position: relative;
   height: 250px;
-  width: 75%;
   outline: 2px solid yellow;
   float: left;
 }
@@ -18,20 +30,24 @@
 
 .homeListPhoto {
   height: 100%;
-  width: 25%;
+  width: 250px;
   display: inline-block;
   outline: 2px solid green;
   float: left;
 }
 
 .homeListPhotoImage {
-  height: 80%;
-  width:  80%;
-  margin-top: 10%;
-  margin-left: 10%;
+  height: 90%;
+  width:  90%;
+  margin-top: 5%;
+  margin-left: 5%;
   display: inline-block;
   outline: 2px solid green;
   float: left;
+}
+
+.homeListPhotoImage img {
+    height: 100%;
 }
 
 .homeRightNav {
