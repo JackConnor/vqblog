@@ -1,1 +1,1 @@
-angular.module('vqBlog', ['mainPageController', 'app.routes'])
+angular.module('vqBlog', ['mainPageController', 'articleController' 'app.routes'])

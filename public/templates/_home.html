@@ -2,7 +2,7 @@ Ich bin im Homepage
 <div class="homeContainer" ng-controller='mainPageCtrl'>
   <div class="row">
     <div class="homeListHolder col-sm-10 col-xs-12">
-      <div class="homeArticleList"  id='homeArticle{{$index}}' ng-repeat="article in main.seed" ng-mouseenter="main.hoverArticle($index)" ng-mouseleave="main.hoverArticle($index)"
+      <div class="homeArticleList"  id='homeArticle{{$index}}' ng-repeat="article in main.seed" ng-mouseenter="main.hoverArticle($index, article.id)" ng-mouseleave="main.hoverArticle($index, article.id)"
       >
         <div class="homeArticleContainer">
           <div class="homeListPhoto" id="homeListPhoto{{$index}}">

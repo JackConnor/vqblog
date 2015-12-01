@@ -12,14 +12,15 @@ var app = angular.module('mainPageController', [])
     /////////////////////////////////////////////
     var hoverCounterArray = [];
 
-    self.hoverArticle = function(ind){
+    self.hoverArticle = function(ind, id){
+      console.log(id);
       if(!hoverCounterArray[ind]){
         $('#homeArticle'+ind).prepend(
           "<div class='linkHolderContainer' id='linkHolderContainer"+ind+"'>"+
           "</div>"
         )
         $('#linkHolderContainer'+ind).prepend(
-          "<div class='linkHolder' id='linkHolder"+ind+"'>"+
+          "<div class='linkHolder "+id+"' id='linkHolder"+ind+"'>"+
             "<h2>Read Full Article</h2>"+
           "</div>"
         )
@@ -32,6 +33,9 @@ var app = angular.module('mainPageController', [])
           $('#linkHolder'+ind).css({
             backgroundColor: "#4B1240"
           })
+        })
+        $('#linkHolder'+ind).on('click', function(){
+          window.location.hash = "#/articles/"+id;
         })
         hoverCounterArray[ind] = !hoverCounterArray[ind];
       } else {
@@ -59,24 +63,31 @@ var app = angular.module('mainPageController', [])
     self.seed = [
     {
       title: 'Some Title'
+      ,id: 000000001
       ,content: "blah blah blha blah blah blah blha"
       ,author: "Jack"
       ,imgSmall: "http://orig12.deviantart.net/6eee/f/2012/299/b/a/150509_4727155___jpeg__48_kb__400x400__by_bentelshe3r-d5j1z44.jpg"
     },
     {
       title: 'Some Title'
+      ,id: 000000002
       ,content: "blah blah blha blah blah blah blha"
       ,author: "Jack"
+      ,imgSmall: "http://orig12.deviantart.net/6eee/f/2012/299/b/a/150509_4727155___jpeg__48_kb__400x400__by_bentelshe3r-d5j1z44.jpg"
     },
     {
       title: 'Some Title'
+      ,id: 000000003
       ,content: "blah blah blha blah blah blah blha"
       ,author: "Jack"
+      ,imgSmall: "http://orig12.deviantart.net/6eee/f/2012/299/b/a/150509_4727155___jpeg__48_kb__400x400__by_bentelshe3r-d5j1z44.jpg"
     },
     {
       title: 'Some Title'
+      ,id: 000000004
       ,content: "blah blah blha blah blah blah blha"
       ,author: "Jack"
+      ,imgSmall: "http://orig12.deviantart.net/6eee/f/2012/299/b/a/150509_4727155___jpeg__48_kb__400x400__by_bentelshe3r-d5j1z44.jpg"
     }
   ]
   ////////////End of the controller///
