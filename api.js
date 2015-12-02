@@ -7,7 +7,7 @@ var route          = express.Router();
 //////bring in models////////
 /////////////////////////////
 var Blogpost = require('./models/blogpost.js');
-var Comment  = require('./models/Comment.js');
+var Comment  = require('./models/comment.js');
 ///////finish bringing models////
 /////////////////////////////////
 
