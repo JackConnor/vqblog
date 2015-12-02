@@ -18,8 +18,21 @@ var app = angular.module('articleController', [])
         self.currentArticle = article.data;
       })
     }
+    ///get all comments
+    var currentComments = function(){
+      var articleId = window.location.hash.split('/')[2];
+      $http({
+        method: "GET"
+        ,url: "api/comments/"+articleId
+      })
+      .then(function(comments){
+        console.log(comments);
+        self.currentArticleComments = comments.data;
+      })
+    }
     if(window.location.hash.split('/')[1] == "articles"){
       currentArticle();
+      currentComments();
     }
 
   ////////end article controller//////
