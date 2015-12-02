@@ -33,11 +33,34 @@ module.exports = function(app){
     })
   })
 
+  app.get('/api/comments', function(req, res){
+    Comment.find({}, function(err, comments){
+      res.json(comments)
+    })
+  })
+
   app.get('/api/comments/:blogpost', function(req, res){
     console.log(req.params.blogpost);
     Comment.find({}, function(err, comments){
       if(err){console.log(err)}
-      res.json(comments)
+      var postId = "565d1fe0992ec4f5622f1dc7"
+      var commentsArray = [];
+      for (var i = 0; i < comments.length; i++) {
+        console.log(req.params.blogpost);
+        console.log(comments[i].blogpost);
+        if(comments[i].blogpost == req.params.blogpost){
+          commentsArray.push(comments[i]);
+        }
+      }
+      res.json(commentsArray)
+    })
+  })
+
+  app.post('/api/comments', function(req, res){
+    console.log(req.body);
+    Comment.create(req.body, function(err, comment){
+      if(err){console.log(err)}
+      res.json(comment)
     })
   })
 }
