@@ -7,6 +7,7 @@ var route          = express.Router();
 //////bring in models////////
 /////////////////////////////
 var Blogpost = require('./models/blogpost.js');
+var Comment  = require('./models/Comment.js');
 ///////finish bringing models////
 /////////////////////////////////
 
@@ -29,6 +30,14 @@ module.exports = function(app){
         console.log(article);
         res.json(article);
       }
+    })
+  })
+
+  app.get('/api/comments/:blogpost', function(req, res){
+    console.log(req.params.blogpost);
+    Comment.find({}, function(err, comments){
+      if(err){console.log(err)}
+      res.json(comments)
     })
   })
 }

@@ -6,7 +6,10 @@ var app = angular.module('mainPageController', [])
 
   function mainPageCtrl($http){
     var self = this;
-
+    // 
+    // navigator.geolocation.getCurrentPosition(function(data){
+    //   console.log(data);
+    // })
     // get all articles
     $http({
       method: "GET"
@@ -73,6 +76,16 @@ var app = angular.module('mainPageController', [])
     setTimeout(contentWidthFunc, 100);
     setTimeout(contentWidthFunc, 500);
     setTimeout(contentWidthFunc, 1000);
+    setTimeout(contentWidthFunc, 1500);
+    setTimeout(contentWidthFunc, 2000);
+    setTimeout(contentWidthFunc, 3000);
+    setTimeout(contentWidthFunc, 4000);
+    setTimeout(contentWidthFunc, 5000);
+    setTimeout(contentWidthFunc, 6000);
+    setTimeout(contentWidthFunc, 7000);
+    setTimeout(contentWidthFunc, 8000);
+    setTimeout(contentWidthFunc, 9000);
+    setTimeout(contentWidthFunc, 10000);
     $(window).resize(function(){
       contentWidthFunc();
     })

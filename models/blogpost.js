@@ -7,6 +7,7 @@ var blogpostSchema = new Schema({
   ,smallPhoto: String
   ,bigPhoto: String
   ,content: String
+  ,comments: Array
 })
 
 module.exports = mongoose.model('Blogpost', blogpostSchema)
