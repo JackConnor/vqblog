@@ -35,6 +35,33 @@ var app = angular.module('articleController', [])
       currentComments();
     }
 
+    //////////logic to open and close the create-comment box
+    ////////////////////////////////////////////////////////
+
+    var commentCounter = false;
+    function toggleCommentBox(){
+      $('.singleNewComment').on('click', function(){
+        if(!commentCounter){
+          $('.singleCreateComment').append(
+            "<div class='newCommentContainer'>"+
+              "<input class='newCommentAuthor' placeholder='Your Name'></input>"+
+              "<textarea class='newCommentContent' placeholder='Your Comment'></textarea>"+
+              "<button class='submitComment'>Submit Comment</button>"+
+            "<div>"
+          )
+        }
+        else{
+          $('.newCommentContainer').remove();
+        }
+
+        commentCounter = !commentCounter;
+      })
+    }
+    toggleCommentBox();
+
+    ///////////end logic for open-close comment box ///////
+    ///////////////////////////////////////////////////////
+
   ////////end article controller//////
   ////////////////////////////////////
   ////////////////////////////////////

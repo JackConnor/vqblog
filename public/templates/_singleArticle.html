@@ -18,13 +18,15 @@
   <div class="singleCommentContainer">
     <div class="singleCreateComment">
       <h3>Create a Comment?</h3>
+      <button type="button" class='singleNewComment'>New Comment</button>
     </div>
     <div class="singleCommentList" ng-repeat="comment in article.currentArticleComments">
-      <div class="">
+      <div class="singleCommentContent">
         {{comment.content}}
-        {{comment.author}}
       </div>
-
+      <div class="singleCommentAuthor">
+        --{{comment.author}}
+      </div>
     </div>
   </div>
 </div>

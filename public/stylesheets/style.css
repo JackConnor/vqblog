@@ -90,6 +90,27 @@
   z-index: 2;
 }
 
+.newCommentAuthor {
+  margin-top: 20px;
+  width: 40%;
+  margin-left: 10%;
+}
+
+.newCommentContainer {
+  height: 250px;
+  background-color: #C6EBEF;
+  outline: 3px solid white;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.newCommentContent {
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 10px;
+  height: 130px;
+}
+
 .singleArticleContainer {
   width: 90%;
   margin-left: 5%;
@@ -99,6 +120,30 @@
 
 .singleCaption {
   text-align: center;
+}
+
+.singleCommentAuthor {
+  margin-left: 30%;
+  font-size: 18px;
+}
+
+.singleCommentContainer {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.singleCommentContent {
+  width: 80%;
+  margin-left: 10%;
+  font-size: 25px;
+  text-align: justify;
+}
+
+.singleCommentList {
+  height: 160px;
+  margin-top: 10px;
+  background-color: #C6EBEF;
+  margin-top: 20px;
 }
 
 .singleContentContainer {
@@ -114,6 +159,10 @@
   font-size: 30px;
 }
 
+.singleCreateComment h3{
+  display: inline-block;
+}
+
 .singleImage{
   width: 80%;
   margin-left: 10%;
@@ -123,9 +172,17 @@
   width: 100%;
 }
 
+.singleNewComment {
+  margin-left: 15px;
+}
+
 .singleTitle {
   margin: 0 0 15px 10%;
   padding: 15px 0 0 0;
   font-size: 45px;
   font-style: bolder;
+}
+
+.submitComment {
+  margin-left: 10%;
 }
