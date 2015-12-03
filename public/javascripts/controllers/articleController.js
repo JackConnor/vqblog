@@ -76,6 +76,7 @@ var app = angular.module('articleController', [])
       })
       .then(function(commentData){
         console.log(commentData);
+        addCommentDOM(commentData.data.content, commentData.data.author)
         //////now we add the comment to our blogpost through and updat request
         $http({
           method:"POST"
@@ -84,8 +85,24 @@ var app = angular.module('articleController', [])
         })
         .then(function(newBlogData){
           console.log(newBlogData);
+          $('.newCommentContainer').remove();
+          commentCounter = !commentCounter;
         })
       })
+    }
+
+    ////function to add a new comment (just made) to the DOM
+    function addCommentDOM(content, author){
+      $(".singleCommentListContainer").prepend(
+        "<div class='singleCommentList'>"+
+          "<div class='singleCommentContent'>"+
+            content +
+          "</div>"+
+          "<div class='singleCommentAuthor'>--"+
+            author +
+          "</div>"+
+        "</div>"
+      )
     }
 
     /////end submit new comment

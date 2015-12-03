@@ -20,12 +20,14 @@
       <h3>Create a Comment?</h3>
       <button type="button" class='singleNewComment'>New Comment</button>
     </div>
-    <div class="singleCommentList" ng-repeat="comment in article.currentArticleComments">
-      <div class="singleCommentContent">
-        {{comment.content}}
-      </div>
-      <div class="singleCommentAuthor">
-        --{{comment.author}}
+    <div class="singleCommentListContainer">
+      <div class="singleCommentList" ng-repeat="comment in article.currentArticleComments">
+        <div class="singleCommentContent">
+          {{comment.content}}
+        </div>
+        <div class="singleCommentAuthor">
+          --{{comment.author}}
+        </div>
       </div>
     </div>
   </div>
