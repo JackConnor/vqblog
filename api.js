@@ -22,6 +22,19 @@ module.exports = function(app){
     });
   });
 
+  ////updating articles by adding comments
+  app.post('/api/articles/newcomment', function(req, res){
+    console.log(req.body);
+    Blogpost.findOne({"_id":req.body.id}, function(err, blogpost){
+      if(err){console.log(err)}
+      else{
+        blogpost.comments.push(req.body.data);
+        blogpost.save();
+        res.json(blogpost)
+      }
+    });
+  });
+
   app.get('/api/articles/:id', function(req, res){
     console.log(req.params.id);
     Blogpost.findOne({"_id": req.params.id}, function(err, article){

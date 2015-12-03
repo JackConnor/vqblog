@@ -35,7 +35,7 @@ var app = angular.module('articleController', [])
       currentComments();
     }
 
-    //////////logic to open and close the create-comment box
+    //////////logic to open and close and create new the create-comment box
     ////////////////////////////////////////////////////////
 
     var commentCounter = false;
@@ -49,6 +49,10 @@ var app = angular.module('articleController', [])
               "<button class='submitComment'>Submit Comment</button>"+
             "<div>"
           )
+          $('.submitComment').on('click', function(){
+            console.log('yoyoyoyo');
+            addComment();
+          })
         }
         else{
           $('.newCommentContainer').remove();
@@ -59,7 +63,35 @@ var app = angular.module('articleController', [])
     }
     toggleCommentBox();
 
-    ///////////end logic for open-close comment box ///////
+    /////submit new comment logic
+    /////////////////////////////
+    function addComment(){
+      var content = $('.newCommentContent').val();
+      var author = $('.newCommentAuthor').val();
+      var blogpost = window.location.hash.split('/')[2];
+      $http({
+        method:"POST"
+        ,url:"/api/comments"
+        ,data:{content:content, author:author, blogpost:blogpost}
+      })
+      .then(function(commentData){
+        console.log(commentData);
+        //////now we add the comment to our blogpost through and updat request
+        $http({
+          method:"POST"
+          ,url:"/api/articles/newcomment"
+          ,data: {id:window.location.hash.split('/')[2], data:commentData.data}
+        })
+        .then(function(newBlogData){
+          console.log(newBlogData);
+        })
+      })
+    }
+
+    /////end submit new comment
+    ///////////////////////////
+
+    ///////////end logic for open-close and create new comment box ///////
     ///////////////////////////////////////////////////////
 
   ////////end article controller//////
